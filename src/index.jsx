@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Home from './Pages/Home';
 import Logement from './Pages/Logement';
 import Error from './Pages/Error';
-
+import "./styles/styles.sass"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <Router>
