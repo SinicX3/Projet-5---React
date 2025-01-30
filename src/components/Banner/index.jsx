@@ -1,11 +1,10 @@
-import img from "../../assets/Banner.jpg"
 import background from "../../assets/Background.png"
 
-function Banner () {
+function Banner ({ text, img }) {
     return (
             <section>
                 <div className="banner">
-                    <p>Chez vous, partout et ailleurs</p>
+                    <p>{text}</p>
                     <img className="img_1" src={img} />
                     <img className="img_2" src={background}/>
                 </div>
