@@ -1,10 +1,12 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Slideshow from '../components/Slideshow';
 
 function Logement () {
+
     return (<div>
         <Header />
-        <h1>Ceci est la page Logement</h1>
+        <Slideshow />
         <Footer />
     </div>)
 }
