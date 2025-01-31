@@ -129,13 +129,45 @@ header
     transform: rotate(180deg)
 
 .desc
-  height: 50px
+  min-height: 50px
   background-color: $light-grey
   padding: 10px
   display: none
 
   &.active
     display: block
+
+//**************************************************************************** Slideshow
+.slideshow
+  display: flex
+  position: relative
+  height: 400px
+
+  img
+    position: absolute
+    width: 100%
+    height: 400px
+    object-fit: cover
+    z-index: 1
+
+  .icons
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .iconL, .iconR
+    height: 80px
+    width: 50px
+    z-index: 2
+    cursor: pointer
+
+  .iconL
+    left: 20px
+    top: 150px
+
+  .iconR
+    right: 20px
+    top: 150px
 
 //**************************************************************************** Footer
 footer
