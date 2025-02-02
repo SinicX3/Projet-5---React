@@ -1,7 +1,18 @@
 import iconR from '../../assets/chevron-right-solid.svg'
 import iconL from '../../assets/chevron-left-solid.svg'
+import { useState } from 'react'
 
 function Slideshow () {
+
+const [index, updateIndex] = useState(0)
+
+const NextPic = () => {
+    if (index < 4) {(updateIndex(index + 1))}
+}
+
+const PrevPic = () => {
+    if (index > 0) {(updateIndex(index - 1))}
+}
 
 const pictures = [
     "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",   // Tableau à supprimer, ajouté uniquement
@@ -12,11 +23,12 @@ const pictures = [
 
     return (<section>
         <div className="slideshow">
-            <div className='icons'>
-                <img src={iconL} className='iconL'/>
-                <img src={iconR} className='iconR'/>
+            <div className={`icons ${(pictures.length > 1) ? 'active' : ''}`} >
+                <img src={iconL} className='iconL' onClick={PrevPic}/>
+                <img src={iconR} className='iconR' onClick={NextPic}/>
+                <p>{index + 1}/{pictures.length}</p>
+                <img src={pictures[index]} className='pic'/>
             </div>
-            <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg" className='pic'/>
         </div>
     </section>
     )
