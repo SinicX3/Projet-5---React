@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom"
+
 function Card({offer}) {
 
     return (
-        <div className="card">
+        <Link to="/logement" className="card">
             <img src={offer.cover}></img>
             <p>{offer.title}</p>
-        </div>
+        </Link>
     )
 }
 
