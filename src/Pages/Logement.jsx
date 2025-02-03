@@ -1,13 +1,15 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import Slideshow from '../components/Slideshow';
+import { useParams } from 'react-router-dom';
+import { useContext } from 'react'
+import { DataContext } from '../context/DataProvider'
 
 function Logement () {
 
+    const offer = useParams()
+    const data = useContext(DataContext)
+
     return (<div>
-        <Header />
-        <Slideshow />
-        <Footer />
+        <Slideshow pictures={data[1].pictures}/>
     </div>)
 }
 
