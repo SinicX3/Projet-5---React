@@ -7,12 +7,12 @@ function Slideshow ({ pictures }) {
     const [index, updateIndex] = useState(0)
 
     const NextPic = () => {
-        if (index < 4) {(updateIndex(index + 1))}
+        if (index < (pictures.length-1)) {(updateIndex(index + 1))}
     }
     const PrevPic = () => {
         if (index > 0) {(updateIndex(index - 1))}
     }
-    
+
         return (<section>
             <div className="slideshow">
                 <div className={`icons ${(pictures.length > 1) ? 'active' : ''}`} >

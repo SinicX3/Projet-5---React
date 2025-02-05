@@ -9,7 +9,7 @@ const handleClick = () => {
         setRotate(!rotate)
     }
 
-    return (<section>
+    return (<div className='wrappers'>
         <div className={`text_wrapper ${rotate ? 'active' : ''}`}>
            <p>{text}</p>
            <img src={icon} onClick={handleClick} />
@@ -17,7 +17,7 @@ const handleClick = () => {
         <div className={`desc ${rotate ? 'active' : ''}`}>
             <span>{desc}</span>
         </div>
-    </section>)
+    </div>)
 }
 
 export default TextWrapper

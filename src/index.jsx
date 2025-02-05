@@ -13,14 +13,14 @@ import { DataProvider } from './context/DataProvider';
 ReactDOM.createRoot(document.getElementById("root")).render(
     <Router>
         <DataProvider>
-        <Header />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path={`/logement/:offerId`} element={<Logement />} />
-                <Route path="/a-propos" element={<About />} />
-                <Route path="*" element={<Error />} />
-            </Routes>
-        <Footer />
+            <Header />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path={`/logement/:offerId`} element={<Logement />} />
+                    <Route path="/a-propos" element={<About />} />
+                    <Route path="*" element={<Error />} />
+                </Routes>
+            <Footer />
         </DataProvider>
     </Router>,
     document.getElementById('root')
