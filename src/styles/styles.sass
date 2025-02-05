@@ -8,6 +8,12 @@ body
   margin: 0px
   font-family: Montserrat
 
+h1
+  font-size: 50px
+  color: $main-color
+  font-weight: 400
+  margin: 0px
+
 //**************************************************************************** Header
 header
   padding: 25px 50px 25px 50px
@@ -108,16 +114,57 @@ header
     font-weight: bold
     z-index: 1
 
+//**************************************************************************** Offer
+.offer > *
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  p
+    font-weight: bold
+
+  .host
+    display: flex
+    flex-direction: row
+    align-items: center
+    color: $main-color
+
+    img
+      height: 64px
+      border-radius: 100px
+      margin-left: 10px
+
+    p
+      font-weight: initial
+
+.wrapper_offer
+  display: flex
+  width: 50% 50%
+  flex-direction: row
+  margin: auto
+
 //**************************************************************************** Text Wrapper
+
+.wrappers
+  display: flex
+  flex-direction: column
+  width: 80%
+  margin: auto
+
 .text_wrapper
   width: 100%
   display: flex
   justify-content: space-between
   height: 50px
+  margin: 20px 0px 0px 0px
   background-color: $main-color
   color: $white
   font-weight: 700
   border-radius: 5px
+
+  .desc
+    width: 100%
+    margin-bottom: 20px
 
   p, img
     padding: 0px 20px 0px 20px
@@ -137,6 +184,18 @@ header
 
   &.active
     display: block
+
+//**************************************************************************** Tags
+.tags
+  display: flex
+
+  p
+    background-color: $main-color
+    margin: 10px
+    padding: 3px 25px 3px 25px
+    border-radius: 15px
+    color: $white
+    font-size: 12px
 
 //**************************************************************************** Slideshow
 .slideshow
