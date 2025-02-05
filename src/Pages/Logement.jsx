@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import { DataContext } from '../context/DataProvider'
 import TextWrapper from '../components/TextWrapper';
 import Tags from '../components/Tags';
+import Rating from '../components/Rating';
 
 function Logement () {
 
@@ -26,9 +27,7 @@ function Logement () {
             </div>
             <div>
                 <Tags tags={offer.tags} />
-                <div>
-                    {offer.rating}
-                </div>
+                <Rating rating={offer.rating}/>
             </div>
         </section>
         <section className='wrapper_offer'>
