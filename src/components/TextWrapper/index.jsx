@@ -1,5 +1,5 @@
 import icon from '../../assets/chevron-up-solid.svg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function TextWrapper({text, desc}) {
 
@@ -15,7 +15,11 @@ const handleClick = () => {
            <img src={icon} onClick={handleClick} />
         </div>
         <div className={`desc ${rotate ? 'active' : ''}`}>
-            <span>{desc}</span>
+            {Array.isArray(desc) ? (                                                            
+                    desc.map((element) => <span>{element}</span>)
+                ) : (
+                    <span>{desc}</span>
+                )}
         </div>
     </div>)
 }

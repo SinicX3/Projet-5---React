@@ -25,7 +25,7 @@ function Logement () {
                     <img src={offer.host.picture} />
                 </div>
             </div>
-            <div>
+            <div className='tags_rating'>
                 <Tags tags={offer.tags} />
                 <Rating rating={offer.rating}/>
             </div>

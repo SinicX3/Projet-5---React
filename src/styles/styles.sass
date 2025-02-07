@@ -7,6 +7,7 @@ $light-grey: #F6F6F6
 body
   margin: 0px
   font-family: Montserrat
+  max-width: 1440px
 
 h1
   font-size: 50px
@@ -139,9 +140,11 @@ header
 
 .wrapper_offer
   display: flex
-  width: 50% 50%
   flex-direction: row
-  margin: auto
+  gap: 80px
+
+  .wrappers
+    margin: initial
 
 //**************************************************************************** Text Wrapper
 
@@ -150,6 +153,11 @@ header
   flex-direction: column
   width: 80%
   margin: auto
+
+.desc
+  span
+    display: flex
+    flex-direction: column
 
 .text_wrapper
   width: 100%
@@ -187,19 +195,22 @@ header
 
 //**************************************************************************** Tags
 
-#tags_rating
-  display: flex
+.tags_rating
+  justify-content: space-between
 
-.tags
-  display: flex
+  .tags
+    display: flex
 
-  p
-    background-color: $main-color
-    margin: 0px 10px 0px 10px
-    padding: 3px 25px 3px 25px
-    border-radius: 15px
-    color: $white
-    font-size: 12px
+    p
+      background-color: $main-color
+      margin: 0px 10px 0px 10px
+      padding: 3px 25px 3px 25px
+      border-radius: 15px
+      color: $white
+      font-size: 12px
+
+  .rating
+    margin-right: 80px
 
 //**************************************************************************** Rating
 
@@ -246,9 +257,21 @@ header
     left: 20px
     top: 150px
 
+    &.active
+      display: inline-block
+
+    &.none
+      display: none
+
   .iconR
     right: 20px
     top: 150px
+
+    &.active
+      display: inline-block
+
+    &.none
+      display: none
 
 //**************************************************************************** Footer
 footer
