@@ -5,12 +5,12 @@ $light-grey: #F6F6F6
 
 //**************************************************************************** Main
 body
-  margin: 0px
+  margin: auto
   font-family: Montserrat
   max-width: 1440px
 
 h1
-  font-size: 50px
+  font-size: 40px
   color: $main-color
   font-weight: 400
   margin: 0px
@@ -115,37 +115,6 @@ header
     font-weight: bold
     z-index: 1
 
-//**************************************************************************** Offer
-.offer > *
-  display: flex
-  justify-content: space-between
-  align-items: center
-
-  p
-    font-weight: bold
-
-  .host
-    display: flex
-    flex-direction: row
-    align-items: center
-    color: $main-color
-
-    img
-      height: 64px
-      border-radius: 100px
-      margin-left: 10px
-
-    p
-      font-weight: initial
-
-.wrapper_offer
-  display: flex
-  flex-direction: row
-  gap: 80px
-
-  .wrappers
-    margin: initial
-
 //**************************************************************************** Text Wrapper
 
 .wrappers
@@ -193,15 +162,19 @@ header
   &.active
     display: block
 
-//**************************************************************************** Tags
+//**************************************************************************** Offer
 
-.tags_rating
+.offer_tags
+  display: flex
+  flex-direction: row
   justify-content: space-between
+  align-items: center
 
   .tags
     display: flex
 
     p
+      font-weight: bold
       background-color: $main-color
       margin: 0px 10px 0px 10px
       padding: 3px 25px 3px 25px
@@ -209,15 +182,40 @@ header
       color: $white
       font-size: 12px
 
-  .rating
-    margin-right: 80px
+.wrapper_offer
+  display: flex
+  flex-direction: row
+  gap: 80px
+
+  .wrappers
+    margin: initial
+
+//**************************************************************************** Host
+
+.host_rating
+  display: flex
+  flex-direction: column
+
+  .host
+    display: flex
+    flex-direction: row
+    align-items: center
+    color: $main-color
+    margin: auto
+
+    img
+      height: 64px
+      border-radius: 100px
+      margin-left: 10px
 
 //**************************************************************************** Rating
 
 .rating
   display: flex
-  height: 20
-  width: 20px
+  height: 15px
+  width: 15px
+  gap: 8px
+  margin-right: 0px
 
 //**************************************************************************** Slideshow
 .slideshow
@@ -227,6 +225,7 @@ header
 
   img
     position: absolute
+    border-radius: 15px
     width: 100%
     height: 400px
     object-fit: cover
@@ -316,7 +315,8 @@ footer
     padding: 15px
 
     a
-      font-size: 20px
+      font-size: 15px
+      text-transform: uppercase
 
   section
     padding: 15px
@@ -333,3 +333,39 @@ footer
 
   .card
     width: 100%
+
+  .offer_tags
+    flex-direction: column
+
+    h1
+      font-size: 20px
+
+  .icons
+
+    p
+      display: none
+
+    .iconR, .iconL
+      height: 30px
+      width: 20px
+      top: 180px
+
+  .wrapper_offer
+    flex-direction: column
+    padding: 0px 0px 15px 0px
+    gap: 0px
+    align-items: center
+
+  .host_rating
+    width: 100%
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    margin-top: 20px
+
+    .host
+      margin: 0px
+      order: 2
+
+    .rating
+      order: 1

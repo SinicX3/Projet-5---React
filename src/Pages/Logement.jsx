@@ -14,19 +14,19 @@ function Logement () {
 
     return (<main>
         <Slideshow pictures={offer.pictures}/>
-        <section className='offer'>
+        <section className='offer_tags'>
             <div>
                 <div>
                     <h1>{offer.title}</h1>
                     <p>{offer.location}</p>
                 </div>
+                <Tags tags={offer.tags} />
+            </div>
+            <div className='host_rating'>
                 <div className='host'>
                     <p>{offer.host.name}</p>
                     <img src={offer.host.picture} />
                 </div>
-            </div>
-            <div className='tags_rating'>
-                <Tags tags={offer.tags} />
                 <Rating rating={offer.rating}/>
             </div>
         </section>
@@ -38,3 +38,19 @@ function Logement () {
 }
 
 export default Logement
+
+
+{/* <div>
+<div>
+    <h1>{offer.title}</h1>
+    <p>{offer.location}</p>
+</div>
+<div className='host'>
+    <p>{offer.host.name}</p>
+    <img src={offer.host.picture} />
+</div>
+</div>
+<div className='tags_rating'>
+<Tags tags={offer.tags} />
+<Rating rating={offer.rating}/>
+</div> */}
