@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import background from "../../assets/Background.png"
 
 function Banner ({ text, img }) {
@@ -10,6 +11,11 @@ function Banner ({ text, img }) {
                 </div>
             </section>
     )
+}
+
+Banner.propTypes = {
+    text: PropTypes.string,
+    img: PropTypes.string
 }
 
 export default Banner

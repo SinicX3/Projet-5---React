@@ -4,7 +4,7 @@ import banner from "../assets/Banner.jpg";
 
 function Home () {
     return (<div>
-        <Banner text='Chez vous, partout et ailleurs' img={banner}/>
+        <Banner text={"Chez vous, partout et ailleurs"} img={banner}/>
         <CardWrapper />
     </div>)
 }
