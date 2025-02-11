@@ -1,6 +1,6 @@
 $black: #000
 $white: #FFF
-$main-color: #ff6060
+$main-color: #ff5454
 $light-grey: #F6F6F6
 
 //**************************************************************************** Main
@@ -168,17 +168,17 @@ header
   display: flex
   flex-direction: row
   justify-content: space-between
-  align-items: center
 
   .tags
     display: flex
+    width: 100%
 
     p
+      margin: 5px
       font-weight: bold
       background-color: $main-color
-      margin: 0px 10px 0px 10px
       padding: 3px 25px 3px 25px
-      border-radius: 15px
+      border-radius: 5px
       color: $white
       font-size: 12px
 
@@ -218,6 +218,7 @@ header
   margin-right: 0px
 
 //**************************************************************************** Slideshow
+
 .slideshow
   display: flex
   position: relative
@@ -273,7 +274,9 @@ header
       display: none
 
 //**************************************************************************** Footer
+
 footer
+  margin-top: 10px
   padding: 15px
   display: flex
   flex-direction: column
@@ -309,7 +312,7 @@ footer
 //**************************************************************************** 
 //**************************************************************************** Media Queries
 
-@media screen and (max-width: 480px)
+@media screen and (max-width: 640px)
 
   header
     padding: 15px
@@ -324,8 +327,10 @@ footer
   .banner
     height: 120px
     border-radius: 10px
+
     img
       border-radius: 10px
+
     p
       font-size: 30px
       padding-left: 20px
@@ -333,6 +338,10 @@ footer
 
   .card
     width: 100%
+    margin: 0px 0px 30px 0px
+
+  .card_wrapper
+    background-color: $white
 
   .offer_tags
     flex-direction: column
@@ -369,3 +378,31 @@ footer
 
     .rating
       order: 1
+
+#error
+
+  h1
+    height: 200px
+    padding-top: 25%
+    font-size: 100px
+
+  p
+    font-size: 22px
+    color: $main-color
+
+  a
+    font-size: 18px
+
+  div
+    padding: 20px
+
+footer
+  height: 175px
+  justify-content: center
+
+  img
+    padding: 0px
+  p
+    font-size: 15px
+    text-align: center
+    width: 30%

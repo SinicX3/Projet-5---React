@@ -38,19 +38,3 @@ function Logement () {
 }
 
 export default Logement
-
-
-{/* <div>
-<div>
-    <h1>{offer.title}</h1>
-    <p>{offer.location}</p>
-</div>
-<div className='host'>
-    <p>{offer.host.name}</p>
-    <img src={offer.host.picture} />
-</div>
-</div>
-<div className='tags_rating'>
-<Tags tags={offer.tags} />
-<Rating rating={offer.rating}/>
-</div> */}

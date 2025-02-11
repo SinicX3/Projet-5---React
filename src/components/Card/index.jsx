@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import PropTypes from "prop-types"
 
 function Card({offer}) {
 
@@ -8,6 +9,14 @@ function Card({offer}) {
             <p>{offer.title}</p>
         </Link>
     )
+}
+
+Card.propTypes = {
+    offer: PropTypes.shape({
+        id: PropTypes.string,
+        cover: PropTypes.string,
+        title: PropTypes.string
+    })
 }
 
 export default Card

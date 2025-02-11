@@ -1,5 +1,6 @@
 import icon from '../../assets/chevron-up-solid.svg'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import PropTypes from "prop-types"
 
 function TextWrapper({text, desc}) {
 
@@ -22,6 +23,11 @@ const handleClick = () => {
                 )}
         </div>
     </div>)
+}
+
+TextWrapper.propTypes = {
+    text: PropTypes.string,
+    desc: PropTypes.string
 }
 
 export default TextWrapper
