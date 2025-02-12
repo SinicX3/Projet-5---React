@@ -1,5 +1,6 @@
 import iconR from '../../assets/chevron-right-solid.svg'
 import iconL from '../../assets/chevron-left-solid.svg'
+import PropTypes from 'prop-types'
 import { useState } from 'react'
 
 function Slideshow ({ pictures }) {
@@ -26,6 +27,10 @@ function Slideshow ({ pictures }) {
             </div>
         </section>
         )
+}
+
+Slideshow.propTypes = {
+    pictures: PropTypes.array
 }
 
 export default Slideshow

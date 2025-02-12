@@ -32,7 +32,7 @@ function Logement () {
         </section>
         <section className='wrapper_offer'>
             <TextWrapper text="Description" desc={offer.description}/>
-            <TextWrapper text="Equipements" desc={offer.equipments}/>
+            <TextWrapper text="Equipements" desc={offer.equipments}/> 
         </section>
     </main>)
 }

@@ -3,10 +3,10 @@ import CardWrapper from '../components/CardWrapper';
 import banner from "../assets/Banner.jpg";
 
 function Home () {
-    return (<div>
+    return (<main>
         <Banner text={"Chez vous, partout et ailleurs"} img={banner}/>
         <CardWrapper />
-    </div>)
+    </main>)
 }
 
 export default Home
