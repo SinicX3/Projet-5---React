@@ -17,7 +17,7 @@ const handleClick = () => {
         </div>
         <div className={`desc ${rotate ? 'active' : ''}`}>
             {Array.isArray(desc) ? (                                                            
-                    desc.map((element) => <span>{element}</span>)
+                    desc.map((element, index) => <span key={index}>{element}</span>)
                 ) : (
                     <span>{desc}</span>
                 )}
@@ -27,7 +27,7 @@ const handleClick = () => {
 
 TextWrapper.propTypes = {
     text: PropTypes.string,
-    desc: PropTypes.string
+    desc: PropTypes.any
 }
 
 export default TextWrapper
