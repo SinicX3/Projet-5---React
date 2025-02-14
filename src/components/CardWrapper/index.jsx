@@ -8,7 +8,7 @@ function CardWrapper() {
         fetch(offers)                                                       // Mais le composant doit pouvoir s'adapter même après l'implantation du backend. Ce fetch servira
     }, [])                                                                  // lorsque celui-ci sera en place.
     
-    const [data, updateData] = useState([offers][0])
+    const [data] = useState([offers][0])
     const cards = []
     
     data.forEach((element, index) => {                                               // Création du tableau des logements à afficher
