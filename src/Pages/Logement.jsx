@@ -1,16 +1,28 @@
 import Slideshow from '../components/Slideshow';
-import { useParams } from 'react-router-dom';
-import { useContext } from 'react'
+import { useParams, useNavigate } from 'react-router-dom';
+import { useContext, useEffect } from 'react'
 import { DataContext } from '../context/DataProvider'
 import TextWrapper from '../components/TextWrapper';
 import Tags from '../components/Tags';
 import Rating from '../components/Rating';
 
 function Logement () {
-
+    
     const reqId = useParams()                                                           // L'ID du logement demandé
     const data = useContext(DataContext)                                                // L'ensemble des données stockées dans le contexte
-    const offer = data.find(data => data.id === reqId.offerId)                          // On récupère les données du logement dans le contexte à partir de l'ID
+    const offer = data.find(data => data.id === reqId.offerId);                         // On récupère les données du logement dans le contexte à partir de l'ID
+
+    const navigate = useNavigate();                                                     // S'il y a eu un problème avec l'ID
+    useEffect(() => {   
+        if(!offer) {
+            console.log("Bonjour")
+            navigate("/err")
+        }
+    }, [offer, navigate])
+
+    if (!offer) {
+        return null;
+    }
 
     return (<main>
         <Slideshow pictures={offer.pictures}/>

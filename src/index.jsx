@@ -19,7 +19,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                     <Route path={`/logement/:offerId`} element={<Logement />} />
                     <Route path="/a-propos" element={<About />} />
                     <Route path="*" element={<Error />} />
-                    <Route path="/logements/*" element={<Error />} />
                 </Routes>
             <Footer />
         </DataProvider>

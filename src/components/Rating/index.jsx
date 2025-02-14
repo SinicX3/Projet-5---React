@@ -5,12 +5,12 @@ function Rating (rating) {
 
  const ratingList = []
  for (let i = 0; i < rating.rating; i++) {
-  ratingList.push(<img src={star}/>)
+  ratingList.push(<img key={i} src={star}/>)
  }
 
  const badRating = 5 % rating.rating
- for (let i = 0; i < badRating; i++) {
-  ratingList.push(<img src={nostar}/>)
+ for (let j = 0; j < badRating; j++) {
+  ratingList.push(<img key={j + rating.rating} src={nostar}/>)
  }
 
  return(<div className='rating'>
