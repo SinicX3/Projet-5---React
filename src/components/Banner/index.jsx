@@ -14,7 +14,10 @@ function Banner ({ text, img }) {
 }
 
 Banner.propTypes = {
-    text: PropTypes.string,
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.array
+    ]),
     img: PropTypes.string
 }
 
