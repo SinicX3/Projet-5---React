@@ -22,5 +22,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 </Routes>
             <Footer />
         </DataProvider>
-    </Router>
+    </Router> 
 )
