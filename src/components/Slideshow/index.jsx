@@ -21,7 +21,7 @@ function Slideshow ({ pictures }) {
                 <div className={`icons ${(pictures.length > 0) ? 'active' : ''}`} >
                     <img src={iconL} className={`iconL ${(pictures.length > 1) ? 'active' : 'none'}`} onClick={PrevPic}/>
                     <img src={iconR} className={`iconR ${(pictures.length > 1) ? 'active' : 'none'}`} onClick={NextPic}/>
-                    <p>{index + 1}/{pictures.length}</p>
+                    <p className={(pictures.length > 1) ? null : 'none'}>{index + 1}/{pictures.length}</p>
                     <img src={pictures[index]} className='pic'/>
                 </div>
             </div>
