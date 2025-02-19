@@ -15,7 +15,6 @@ function Logement () {
     const navigate = useNavigate();                                                     // S'il y a eu un problème avec l'ID
     useEffect(() => {   
         if(!offer) {
-            console.log("Bonjour")
             navigate("/err")
         }
     }, [offer, navigate])
