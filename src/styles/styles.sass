@@ -145,6 +145,7 @@ header
   color: $white
   font-weight: 700
   border-radius: 5px
+  z-index: 2
 
   .desc
     width: 100%
@@ -159,15 +160,21 @@ header
 
   &.active img
     transform: rotate(180deg)
+    transition-duration: 500ms
 
 .desc
-  min-height: 50px
+  height: 0px
   background-color: $light-grey
   padding: 10px
-  display: none
+  opacity: 0
+  transform: translateY(-20px)
+  z-index: 1
 
   &.active
-    display: block
+    height: 100%
+    opacity: 1
+    transition-duration: 1s
+    transform: translateY(0px)
 
 //**************************************************************************** Offer
 
