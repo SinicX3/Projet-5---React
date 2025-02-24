@@ -11,7 +11,7 @@ function CardWrapper() {
     const [data] = useState([offers][0])
     const cards = []
     
-    data.forEach((element, index) => {                                               // Création du tableau des logements à afficher
+    data.map((element, index) => {                                               // Création du tableau des logements à afficher
         cards.push(<Card key={index} offer={element}/>)
     });
 
