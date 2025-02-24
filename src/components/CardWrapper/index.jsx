@@ -13,7 +13,7 @@ function CardWrapper() {
     
     data.forEach((element, index) => {                                               // Création du tableau des logements à afficher
         cards.push(<Card key={index} offer={element}/>)
-    }, []);
+    });
 
     return (
         <section>
